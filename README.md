@@ -11,6 +11,8 @@
 
 5. Click **Window > Package Manager > TexmMesh Pro > Import TMP Essential Resources**.
 
-6. Done! You’re ready to go.
+6. Import "Portals for VR v1.2.1".
+
+7. Done! You’re ready to go.
 
 > ⚠️ Make sure to import samples **after cloning** to keep asset references working.
