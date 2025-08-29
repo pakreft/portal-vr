@@ -82,3 +82,10 @@ crashlytics-build.properties
 
 # MacOS folder settings
 .DS_Store
+
+# Ignore everything in Samples folder
+Assets/Samples/**
+# But don't ignore any .meta files inside Samples
+!Assets/Samples/**/*.meta
+# Also don't ignore folders inside Samples so git can see the meta files
+!Assets/Samples/**/
