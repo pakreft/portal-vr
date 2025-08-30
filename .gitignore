@@ -89,3 +89,7 @@ Assets/Samples/**
 !Assets/Samples/**/*.meta
 # Also don't ignore folders inside Samples so git can see the meta files
 !Assets/Samples/**/
+
+Assets/Fragilem17/**
+!Assets/Fragilem17/**/*.meta
+!Assets/Fragilem17/**/
