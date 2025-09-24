@@ -10,9 +10,11 @@ namespace PortalVR.Gadgets.Laser
         public UnityEvent OnLaserExit;
 
         private Renderer _renderer;
+        protected LaserManager _laserManager;
 
         protected virtual void Awake()
         {
+            _laserManager = GetComponentInParent<LaserManager>();
             _renderer = GetComponent<Renderer>();
             _renderer.material.color = Color.red;
         }

@@ -29,9 +29,17 @@ namespace PortalVR.Gadgets.Laser
             _lineRenderer.positionCount = 2;
         }
 
-        private void OnEnable() => _lineRenderer.enabled = true;
+        private void OnEnable()
+        {
+            _lineRenderer.enabled = true;
+            _laserManager.Register(this);
+        }
 
-        private void OnDisable() => _lineRenderer.enabled = false;
+        private void OnDisable()
+        {
+            _lineRenderer.enabled = false;
+            _laserManager.Unregister(this);
+        }
 
         public List<IHittable> FireLaser()
         {
@@ -52,7 +60,10 @@ namespace PortalVR.Gadgets.Laser
                     hittables.Add(hittable);
                 }
 
-                if (hittable is Trigger) { }
+                if (hittable is Trigger)
+                {
+                    hittable.LaserEnter(this);
+                }
                 else
                 {
                     endPos = hit.point;

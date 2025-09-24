@@ -18,16 +18,12 @@ namespace PortalVR.Gadgets.Laser
             _emitter.enabled = false;
         }
 
-        private void OnEnable() { }
-
-        private void OnDisable() { }
-
-        private void EnableEmitter()
+        public override void LaserEnter(LaserEmitter emitter)
         {
             _emitter.enabled = true;
         }
 
-        private void DisableEmitter()
+        public override void LaserExit(LaserEmitter emitter)
         {
             _emitter.enabled = false;
         }
